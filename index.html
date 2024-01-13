@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Data Fetch</title>
+</head>
+<body>
+  <h1>Data from Server</h1>
+  <p id="dataDisplay"></p>
+
+  <h1>Counter Button</h1>
+  <div id="counter">Count: 0</div>
+  <button id="incrementButton" onclick="incrementCounter()">Increment</button>
+
+  <h1>Send Text to Server</h1>
+
+  <form id="textForm">
+    <label for="text">Enter Text:</label>
+    <input type="text" id="text" name="text" required>
+    <p id="dataText"></p>
+    <button type="button" onclick="sendTextControl()">Send Text</button>
+  </form>
+
+  <h1>Boolean Post Example</h1>
+
+  <label for="booleanCheckbox">Toggle Boolean:</label>
+  <input type="checkbox" id="booleanCheckbox" onchange="handleCheckboxChange()">
+  <p id="dataBool"></p>
+  <!-- <button type="button" onclick="handleCheckboxChange()">Send Bool</button> -->
+
+  <script src="./ReadData.js"></script>
+  <script src="./SendText.js"></script>
+  <script src="./SendBool.js"></script>
+  <script>
+    let count = 0;
+
+    function incrementCounter() {
+    count++;
+    document.getElementById('counter').innerText = `Count: ${count}`;
+    }
+
+</script>
+</body>
+</html>
